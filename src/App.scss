@@ -6,7 +6,6 @@ background: linear-gradient(148deg, rgba(79,196,205,1) 0%, rgba(52,52,52,1) 30%)
 .container{
   max-width: 1200px;
   margin: 0 auto;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -47,9 +46,16 @@ background: linear-gradient(148deg, rgba(79,196,205,1) 0%, rgba(52,52,52,1) 30%)
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #484848;
   h1{
     font-size: 40px;
     color: #c4e1e3;
+    line-height: 42px;
+  }
+  a{
+    color: #4fc4cd;
   }
 }
 .bannerImage{
@@ -62,7 +68,6 @@ background: linear-gradient(148deg, rgba(79,196,205,1) 0%, rgba(52,52,52,1) 30%)
 
 .footerWrap{
   margin-top: 10px;
-  border-top: 1px solid #484848;
   text-align: center;
   p{
     font-size: 12px;
