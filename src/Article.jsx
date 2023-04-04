@@ -1,13 +1,26 @@
-import homeImage from "./assets/img-1.png";
+import { useState } from "react";
 
-export default function Article(props) {
+export default function Article({itemImage, itemTitle, itemContent}) {
+
+  let [moreText, setMoreText] = useState("");
+  let [readMoreLink, setReadMoreLink] = useState("Read more");
+
+  const handleClick = (e)=> {
+    e.preventDefault();
+
+    let lorem = ` Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`
+
+    moreText == "" ? (setMoreText(lorem), setReadMoreLink("Less")) : (setMoreText(""), setReadMoreLink("Read more"))
+
+  }
+
   return (
     <div className="banner">
-      <img src={props.itemImage} className="bannerImage" alt="image" />
+      <img src={itemImage} className="bannerImage" alt="image" />
       <div className="bannerContent">
-        <h1>{props.itemTitle}</h1>
-        <p>{props.itemContent}</p>
-        <a href="#">Read more</a>
+        <h1>{itemTitle}</h1>
+        <p>{itemContent}{moreText}</p>
+        <a href="#" onClick={handleClick}>{readMoreLink}</a>
       </div>
     </div>
   );

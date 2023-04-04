@@ -6,18 +6,21 @@ import Article from "./Article";
 export default function Blog() {
   const article = [
     {
+      id: 1,
       itemTitle: "Life is short and the world is wide.I better get started.",
       itemContent:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
         itemImage: Image1
     },
     {
+      id: 2,
       itemTitle: "I better get started.Life is short and the world is wide.",
       itemContent:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
         itemImage: Image2
     },
     {
+      id: 3,
       itemTitle: "I better get started.Life is short and the world is wide.",
       itemContent:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry",
@@ -28,7 +31,7 @@ export default function Blog() {
     <div>
       {article.map((postItem) => {
         return (
-          <Article
+          <Article key={postItem.id}
             itemTitle={postItem.itemTitle}
             itemContent={postItem.itemContent}
             itemImage={postItem.itemImage}
