@@ -1,6 +1,6 @@
-import Image1 from "./assets/img-1.png";
-import Image2 from "./assets/img-2.jpg";
-import Image3 from "./assets/img-3.jpg";
+import Image1 from "../assets/img-1.png";
+import Image2 from "../assets/img-2.jpg";
+import Image3 from "../assets/img-3.jpg";
 import Article from "./Article";
 
 export default function Blog() {

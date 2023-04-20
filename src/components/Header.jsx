@@ -1,28 +1,27 @@
-import Link from "./Link";
-
+import Nav from "./Nav";
 function Header() {
   const navLinks = [
     {
       id:1,
-      linkHref: "home.html",
+      linkHref: "",
       linkClass: "nav-link",
       linkText: "Home",
     },
     {
       id:2,
-      linkHref: "about.html",
+      linkHref: "about",
       linkClass: "nav-link",
       linkText: "About",
     },
     {
       id:3,
-      linkHref: "service.html",
+      linkHref: "services",
       linkClass: "nav-link",
-      linkText: "Service",
+      linkText: "Services",
     },
     {
       id:4,
-      linkHref: "Contact.html",
+      linkHref: "contact",
       linkClass: "nav-link",
       linkText: "Contact",
     },
@@ -35,7 +34,7 @@ function Header() {
         <ul>
           {navLinks.map(function (navItem) {
             return (
-              <Link
+              <Nav
                 key={navItem.id}
                 linkHref={navItem.linkHref}
                 linkClass={navItem.linkClass}
